@@ -4,7 +4,7 @@ const Seqeulize = require('sequelize');
 require('dotenv').config();
 
 //create connect to our database, pass in your MySQL information for username and password
-const sequelize = new Seqeulize('just_tech_news_db',
+const sequelize = new Seqeulize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD,
