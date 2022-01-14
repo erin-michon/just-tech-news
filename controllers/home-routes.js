@@ -27,8 +27,7 @@ router.get('/', (req, res) => {
         attributes: ['username']
       }
     ]
-  })
-    .then(dbPostData => {
+  })    .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
 
       res.render('homepage', {
@@ -98,5 +97,6 @@ router.get('/post/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;
